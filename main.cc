@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "cell.cc"
+#include "cell.h"
 
 using namespace std;
 
@@ -14,8 +14,8 @@ int main()
 			+to_string(width)+ " cells, and a height of " +to_string(height)+ " cells.";
 	cout << intro << endl;
 
-	Cell c1(3,4,true);
-	cout << "The coordinates of c1 are ("+c1.x+", "+c1.y+")" << endl;
+	Cell c1(15,7,true);
+	cout << "The coordinates of c1 are ("+to_string(c1.x)+", "+to_string(c1.y)+")" << endl;
 	
 	if(c1.state)
 		cout << "And the cell c1 is alive." << endl;
