@@ -1,5 +1,6 @@
 #include <iostream>
-#include <string>
+#include <cstdlib>
+#include "board.h"
 #include "cell.h"
 
 using namespace std;
@@ -9,19 +10,17 @@ int main()
 	string intro;
 	int width,height;
 	width = 20;
-	height = 20;
+	height = 10;
+
 	intro = "Welcome to the Game of Life!\nThis simulation will run with a width of "
 			+to_string(width)+ " cells, and a height of " +to_string(height)+ " cells.";
-	cout << intro << endl;
+	cout << intro << endl << endl;
 
-	Cell c1(15,7,true);
-	cout << "The coordinates of c1 are ("+to_string(c1.x)+", "+to_string(c1.y)+")" << endl;
-	
-	if(c1.state)
-		cout << "And the cell c1 is alive." << endl;
-	else
-		cout << "And the cell c1 is dead." << endl;
-	
+	Board b(width, height);
+	b.printBoard();	
 
 	return 0;
 }
+
+
+
