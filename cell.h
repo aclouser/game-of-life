@@ -13,9 +13,9 @@ class Cell
 	public:
     	Cell(int x, int y, bool state);
 		Cell();
-     	void setState(bool newState);
-		bool checkNeighbors();
+		bool checkNeighbors(bool **temp, int width, int height);
 		string getCellInfo();
 		bool getState();
+		void setState(bool nextState);
 };
 #endif
